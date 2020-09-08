@@ -49,7 +49,7 @@ const tempData = [
     },
     {
       title: "Buy 22 water",
-      completed: true
+      completed: false
     }
   ]
 },

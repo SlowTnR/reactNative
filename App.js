@@ -1,26 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, FlatList} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, FlatList, Modal} from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
 import col from "./Colors"
 import tempData from "./tempData"
 import TodoList from "./components/TodoList"
+import AddListModal from './components/AddListModal';
 
 export default class App extends React.Component {
+  state = {
+    addTodoVisible: false
+  };
+  toggleAddTodoModal(){
+    this.setState({addTodoVisible: !this.state.addTodoVisible});
+  }
   render(){
     return (
       <View style={styles.container}>
+        <Modal animationType="slide" visible={this.state.addTodoVisible} onRequestClose={() => this.toggleAddTodoModal()}>
+        <AddListModal  closeModal={() => this.toggleAddTodoModal()}/>
+      </Modal>
         <View style={{flexDirection: "row"}}>
           <View style={styles.divider} />
           
           <Text style={styles.title}>
-            ToDo <Text style={{fontWeight: "300", color: col.blue}}>Lists</Text>
+            ToDoDo <Text style={{fontWeight: "300", color: col.blue}}>Lists</Text>
           </Text>
           <View style={styles.divider} />
         </View>
 
         <View style={{marginVertical: 48}}>
-          <TouchableOpacity style={styles.addList}>
+          <TouchableOpacity style={styles.addList} onPress={() => this.toggleAddTodoModal()}>
             <AntDesign name="plus" size={16} color={col.blue} />
           </TouchableOpacity>
 
