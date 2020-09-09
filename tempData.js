@@ -17,15 +17,15 @@ const tempData = [
       completed: false
     },
     {
-      title: "Passport check",
+      title: "Passport gg check",
+      completed: true
+    },
+    {
+      title: "Passport 1check",
       completed: false
     },
     {
-      title: "Passport check",
-      completed: false
-    },
-    {
-      title: "Passport check",
+      title: "Passport 3check",
       completed: false
     }
   ]

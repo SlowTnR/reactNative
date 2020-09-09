@@ -14,6 +14,11 @@ export default class App extends React.Component {
   toggleAddTodoModal(){
     this.setState({addTodoVisible: !this.state.addTodoVisible});
   }
+
+  renderList = list => {
+    return <TodoList list={list} />
+  }
+
   render(){
     return (
       <View style={styles.container}>
@@ -39,7 +44,7 @@ export default class App extends React.Component {
           </Text>
         </View>
         <View style={{height: 275, paddingLeft: 32}}>
-    <FlatList data={tempData} keyExtractor={item => item.name} horizontal={true} showsVerticalScrollIndicator={false} renderItem={({item}) => <TodoList list={item} />} />
+    <FlatList data={tempData} keyExtractor={item => item.name} horizontal={true} showsVerticalScrollIndicator={false} renderItem={({item}) => this.renderList(item)} />
         </View>
       </View>
     );

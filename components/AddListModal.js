@@ -36,8 +36,8 @@ export default class AddListModal extends Component {
   }
   render() {
     return (
-      <KeyboardAvoidingView styles={styles.container} behavior="padding">
-        <TouchableOpacity style={{position:"absolute", top: 300, right: 32}} onPress={this.props.closeModal}>
+      <KeyboardAvoidingView style={styles.container} behavior="padding">
+        <TouchableOpacity style={{position:"absolute", top: 64, right: 32}} onPress={this.props.closeModal}>
           <AntDesign name="close" size={24} color={col.black} />
         </TouchableOpacity>
 
@@ -74,8 +74,8 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     color: col.black,
     alignSelf: "center",
-    marginBottom: 16,
-    marginTop: 32
+    marginBottom: 16
+    
     
 
   },
