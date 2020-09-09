@@ -1,6 +1,7 @@
 // until connected to firebase
 const tempData = [
 {
+  id: 1,
   name: "Do something",
   color: "#24A6D9",
   todos: [
@@ -32,6 +33,7 @@ const tempData = [
 },
 
 {
+  id: 2,
   name: "Do something again...",
   color: "#8022D9",
   todos: [
@@ -54,6 +56,7 @@ const tempData = [
   ]
 },
 {
+  id: 3,
   name: "Programming",
   color: "#8022D9",
   todos: [
