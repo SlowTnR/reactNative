@@ -59,7 +59,7 @@ export default class TodoModal extends React.Component {
           </View>
         </View>
         <View style={[styles.section, {flex: 3}]}>
-          <FlatList data={list.todos} renderItem={({item,index}) => this.renderTodo(item, index)} keyExtractor={item => item.title} contentContainerStyle={{paddingHorizontal: 32, paddingVertical: 64}} showsVerticalScrollIndicator={false} />
+          <FlatList data={list.todos} renderItem={({item,index}) => this.renderTodo(item, index)} keyExtractor={(_,index) => index.toString()} contentContainerStyle={{paddingHorizontal: 32, paddingVertical: 64}} showsVerticalScrollIndicator={false} />
         </View>
         <View style={[styles.section, styles.footer]}>
             <TextInput style={[styles.input, {borderColor: list.color}]} onChangeText={text => this.setState({newTodo: text})} value={this.state.newTodo} />
