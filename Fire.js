@@ -9,6 +9,7 @@ const firebaseConfig = {
   storageBucket: "rntodoapp-9194f.appspot.com",
   messagingSenderId: "414193624461",
   appId: "1:414193624461:web:3d9d3eaa6958db65a149c4"
+  // ggg
 };
 
 class Fire {
